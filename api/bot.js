@@ -1,4 +1,4 @@
-const { Bot } = require("grammy");
+import { Bot, webhookCallback } from "grammy";
 require('dotenv').config();
 
 // Create a bot object
@@ -10,4 +10,6 @@ bot.on("message:text", (ctx) => ctx.reply("Result: " + ctx.message.text * 2));
 
 
 // Start the bot (using long polling)
-bot.start();
+//bot.start();
+
+export default webhookCallback(bot, "https://basic-bot-three.vercel.app/api/bot");
