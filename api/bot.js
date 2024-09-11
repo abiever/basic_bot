@@ -12,4 +12,4 @@ bot.on("message:text", (ctx) => ctx.reply("Result: " + ctx.message.text * 2));
 // Start the bot (using long polling)
 //bot.start();
 
-export default webhookCallback(bot, "https://basic-bot-three.vercel.app/api/bot");
+export default webhookCallback(bot, "std/http");
